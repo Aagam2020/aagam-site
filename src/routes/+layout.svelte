@@ -20,10 +20,10 @@
 <style>
   :root { --max: 900px; }
 
-  html, body { margin: 0; padding: 0; }
+ :global(html), :global(body) { margin: 0; padding: 0; }
 
   /* 🔶 soft yellow background */
-  body {
+  :global(body) {
     font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     line-height: 1.7;
     color: #1e293b;
