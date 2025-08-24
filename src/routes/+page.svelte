@@ -8,7 +8,7 @@
   const Icon = {
     x: `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.9 3H22l-7 8.1L23.5 21H16l-5-6.5L5 21H2l7.5-8.7L1 3h7l4.6 6L18.9 3Z"/></svg>`,
     github: `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8.1 11.2.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.5-4-1.5-.6-1.5-1.6-1.9-1.6-1.9-1.3-.9.1-.9.1-.9 1.5.1 2.2 1.6 2.2 1.6 1.3 2.2 3.5 1.6 4.4 1.2.1-1 .5-1.6.9-2-2.7-.3-5.6-1.4-5.6-6.2 0-1.4.5-2.5 1.3-3.5-.1-.3-.6-1.7.1-3.5 0 0 1.1-.4 3.6 1.3a12.3 12.3 0 0 1 6.6 0c2.5-1.7 3.6-1.3 3.6-1.3.7 1.8.2 3.2.1 3.5.8 1 1.3 2.1 1.3 3.5 0 4.8-2.9 5.9-5.6 6.2.5.4 1 1.3 1 2.6v3.8c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>`,
-    linkedin: `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V8.9h3.4v1.6h.1c.5-1 1.7-2 3.5-2 3.7 0 4.4 2.4 4.4 5.4v6.5zM5.3 7.3c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM3.5 20.4h3.7V8.9H3.5v11.5z"/></svg>`
+    linkedin: `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V8.9h3.4v1.6h.1c.5-1 1.7-2 3.5-2 3.7 0 4.4 2.4 4.4 5.4v6.5zM5.3 7.3c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM3.5 20.4h3.7V8.9H3.5v11.5z"/></svg>`,
     substack: `<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4 3h16v2H4V3Zm0 5h16v2H4V8Zm0 5h16v8l-8-3-8 3v-8Z"/></svg>`
   };
 </script>
