@@ -19,7 +19,7 @@ const experience: Experience[] = [
     org: "1486 Labs",
     role: "Product Development Intern",
     period: "2023",
-    logo: "https://logo.clearbit.com/1486labs.com",
+    logo: "/1486labslogo.png",  // points to /static/1486labslogo.png
     summary:
       "contributed to research, prototyping, and data-driven discovery; supported experiments from concept to insights."
   },
