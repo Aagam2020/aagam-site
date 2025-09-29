@@ -14,6 +14,11 @@ const projects: Project[] = [
   {
     title: "finance playground",
     blurb: "small models for portfolio analysis and market data pipelines."
+  },
+  {
+    title: "Focus Timer (Pomodoro)",
+    url: "https://focus-timer-iota-eight.vercel.app",
+    blurb: "25/5 timer with auto-cycle, sound, and local settings—no login."
   }
 ];
 
