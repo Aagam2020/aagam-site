@@ -3,6 +3,7 @@
   import experience from '$lib/content/experience';
   import testimonials from '$lib/content/testimonials';
   import projects from '$lib/content/projects';
+  import caseStudies from '$lib/content/caseStudies';
 
   // inline SVG icons
   const Icon = {
