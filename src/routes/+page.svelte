@@ -106,6 +106,24 @@
 </section>
 {/if}
 
+{#if caseStudies.length}
+<section id="case-studies">
+  <h2>case studies</h2>
+  <p class="lead">
+    deeper dives into product strategy, ux, and growth.
+  </p>
+
+  <ul class="list">
+    {#each caseStudies as cs}
+      <li>
+        <a href={cs.url}>{cs.title}</a>
+        {#if cs.blurb} — {cs.blurb}{/if}
+      </li>
+    {/each}
+  </ul>
+</section>
+{/if}
+
 {#if projects.length}
 <section id="projects">
   <h2>side projects</h2>
