@@ -555,12 +555,16 @@
   }
 
   .persona-avatar {
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: auto;
     border-radius: 16px;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 0.45rem;
     display: block;
+  }
+
+  .persona img {
+    padding-top: 0.5rem;
   }
 
   .persona-tag {
