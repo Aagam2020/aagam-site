@@ -10,20 +10,12 @@
   <a href="/#case-studies" class="back-link">← back to case studies</a>
 
   <!-- HERO -->
-  <figure class="hero">
-    <img
-      src="/case-studies/hero.png"
-      alt="Spotify case study hero graphic"
-    />
-    <figcaption>
-      imagining a smoother path from “open spotify” to “this playlist is exactly what i wanted”.
-    </figcaption>
-  </figure>
-
-  <h1>spotify — improving playlist discovery</h1>
-  <p class="case-study-tagline">
-    a teardown and product proposal on helping users find the right playlists faster — and stick around longer.
-  </p>
+  <section class="hero-card">
+    <h1>spotify — improving playlist discovery</h1>
+    <p class="case-study-tagline">
+      a teardown and product proposal on helping users find the right playlists faster — and stick around longer.
+    </p>
+  </section>
 
   <!-- CONTEXT -->
   <section>
@@ -53,7 +45,12 @@
 
     <div class="persona-grid">
       <article class="persona">
-        <img src="/case-studies/persona-scroller.png" alt="Persona: the scroller" />
+        <img
+          src="/case-studies/SCROLLER.png"
+          alt="avatar for the scroller persona"
+          class="persona-avatar"
+        />
+        <div class="persona-tag">persona</div>
         <h3>“the scroller”</h3>
         <p class="persona-role">casual listener • endless feed behavior</p>
         <ul>
@@ -64,7 +61,12 @@
       </article>
 
       <article class="persona">
-        <img src="/case-studies/persona-mood.png" alt="Persona: the mood listener" />
+        <img
+          src="/case-studies/MOOD.png"
+          alt="avatar for the mood listener persona"
+          class="persona-avatar"
+        />
+        <div class="persona-tag">persona</div>
         <h3>“the mood listener”</h3>
         <p class="persona-role">vibes-first • “i want something that feels like…”</p>
         <ul>
@@ -75,7 +77,12 @@
       </article>
 
       <article class="persona">
-        <img src="/case-studies/persona-loyalist.png" alt="Persona: the loyalist" />
+        <img
+          src="/case-studies/LOYALIST.png"
+          alt="avatar for the loyalist persona"
+          class="persona-avatar"
+        />
+        <div class="persona-tag">persona</div>
         <h3>“the loyalist”</h3>
         <p class="persona-role">habitual • lives in liked songs &amp; 2–3 playlists</p>
         <ul>
@@ -103,7 +110,7 @@
     </ul>
   </section>
 
-  <!-- CURRENT DISCOVERY FLOW -->
+  <!-- CURRENT DISCOVERY FLOW (NO IMAGES) -->
   <section>
     <h2>3. current discovery experience</h2>
     <p>
@@ -111,21 +118,27 @@
       and the <strong>made for you</strong> carousel. it works, but it’s scattered.
     </p>
 
-    <figure class="inline-figure">
-      <img
-        src="/case-studies/current-discovery-flow.png"
-        alt="Diagram of current Spotify playlist discovery flow"
-      />
-      <figcaption>simplified view of a typical playlist discovery journey for a casual user today.</figcaption>
-    </figure>
-
-    <p>if we simplify the common path, it often looks like this:</p>
-    <ol>
-      <li>open app → see home screen with a mix of modules (recently played, made for you, popular playlists).</li>
-      <li>scroll a bit → maybe tap a mood/genre row or a daily mix.</li>
-      <li>if nothing feels right → go to search → tap a mood or genre tile → see a large grid of playlists.</li>
-      <li>tap a playlist → skim the tracklist → hit play → bail if first 2–3 tracks miss.</li>
-    </ol>
+    <div class="flow-diagram" aria-label="simplified playlist discovery flow">
+      <div class="flow-step">
+        <span class="flow-badge">1</span>
+        <p>open app → see a busy home screen of mixed modules</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <span class="flow-badge">2</span>
+        <p>scroll a bit → tap a familiar row or daily mix</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <span class="flow-badge">3</span>
+        <p>if nothing fits → go to search → mood / genre tiles</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <span class="flow-badge">4</span>
+        <p>open a playlist → skim → hit play → skip or abandon</p>
+      </div>
+    </div>
 
     <p>three issues show up repeatedly for casual users:</p>
     <ul>
@@ -169,7 +182,7 @@
     </ul>
   </section>
 
-  <!-- OPPORTUNITY FRAMING -->
+  <!-- OPPORTUNITY FRAMING (CSS MATRIX) -->
   <section>
     <h2>5. opportunity framing</h2>
     <p>from the research, the most promising opportunities cluster around:</p>
@@ -180,15 +193,42 @@
       <li><strong>tighten the feedback loop</strong> so spotify learns what “good playlist fit” means for each user.</li>
     </ul>
 
-    <figure class="inline-figure">
-      <img
-        src="/case-studies/opportunity-matrix.png"
-        alt="2x2 matrix of playlist discovery opportunities by user value and effort"
-      />
-      <figcaption>
-        simple 2×2 to prioritize ideas with high user value and moderate implementation effort.
-      </figcaption>
-    </figure>
+    <div class="matrix" aria-label="2x2 opportunity matrix">
+      <div class="matrix-axes">
+        <span>high user value</span>
+        <span>low user value</span>
+      </div>
+      <div class="matrix-grid">
+        <div class="matrix-cell">
+          <h3>high value · low effort</h3>
+          <ul>
+            <li>single, focused discovery surface</li>
+            <li>clear “not for me” signal</li>
+            <li>quick playlist previews</li>
+          </ul>
+        </div>
+        <div class="matrix-cell">
+          <h3>high value · higher effort</h3>
+          <ul>
+            <li>major home screen redesigns</li>
+            <li>deep social graph powered discovery</li>
+          </ul>
+        </div>
+        <div class="matrix-cell">
+          <h3>lower value · low effort</h3>
+          <ul>
+            <li>more carousels on home</li>
+            <li>extra playlist badges</li>
+          </ul>
+        </div>
+        <div class="matrix-cell">
+          <h3>lower value · higher effort</h3>
+          <ul>
+            <li>new playlist formats with unclear demand</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <p>
       out of multiple ideas (revamping search, new editorial formats, social follow graphs, collaborative playlist revamps), one
@@ -210,7 +250,7 @@
       <li>
         <strong>playlist preview on existing grids</strong><br />
         tap-and-hold on any playlist card to hear a short stitched preview.
-        <em>pro:</em> low UI change, fits existing surfaces. <em>con:</em> doesn’t solve fragmentation; discovery still scattered.
+        <em>pro:</em> low ui change, fits existing surfaces. <em>con:</em> doesn’t solve fragmentation; discovery still scattered.
       </li>
       <li>
         <strong>smarter “made for you” shelves on home</strong><br />
@@ -230,7 +270,7 @@
     </p>
   </section>
 
-  <!-- PROPOSED SOLUTION -->
+  <!-- PROPOSED SOLUTION (CSS WIREFRAME) -->
   <section>
     <h2>7. proposed solution — a dedicated playlist discovery feed</h2>
     <p>
@@ -238,13 +278,36 @@
       <em>“micro decisions”</em> instead of big commitments.
     </p>
 
-    <figure class="inline-figure">
-      <img
-        src="/case-studies/discovery-feed-wireframe.png"
-        alt="Wireframe of a playlist discovery feed"
-      />
-      <figcaption>low-fidelity wireframe for a dedicated playlist discovery feed.</figcaption>
-    </figure>
+    <div class="wireframe">
+      <div class="wireframe-header">discover playlists</div>
+      <div class="wireframe-card">
+        <div class="wireframe-art"></div>
+        <div class="wireframe-body">
+          <div class="wireframe-pill-row">
+            <span class="pill">chill focus</span>
+            <span class="pill">low vocals</span>
+            <span class="pill">new jazz</span>
+          </div>
+          <div class="wireframe-lines">
+            <div class="line short"></div>
+            <div class="line medium"></div>
+            <div class="line long"></div>
+          </div>
+          <div class="wireframe-cta-row">
+            <span class="cta primary">preview</span>
+            <span class="cta">play</span>
+            <span class="cta subtle">not for me</span>
+          </div>
+        </div>
+      </div>
+      <div class="wireframe-card subtle-card">
+        <div class="wireframe-art small"></div>
+        <div class="wireframe-body">
+          <div class="line medium"></div>
+          <div class="line short"></div>
+        </div>
+      </div>
+    </div>
 
     <h3>7.1 where it lives</h3>
     <ul>
@@ -412,31 +475,23 @@
     text-decoration: underline;
   }
 
-  .hero {
+  .hero-card {
+    background: linear-gradient(135deg, #bbf7d0, #dcfce7);
+    border-radius: 16px;
+    padding: 1.5rem 1.25rem 1.75rem;
+    border: 1px solid #a7f3d0;
     margin-bottom: 1.75rem;
   }
 
-  .hero img {
-    width: 100%;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
-  }
-
-  .hero figcaption {
-    font-size: 0.85rem;
-    color: #64748b;
-    margin-top: 0.5rem;
-  }
-
-  h1 {
-    font-size: clamp(1.9rem, 3.1vw, 2.4rem);
+  .hero-card h1 {
     margin-bottom: 0.4rem;
+    font-size: clamp(1.9rem, 3.1vw, 2.4rem);
     text-transform: lowercase;
   }
 
   .case-study-tagline {
     color: #64748b;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     font-size: 0.98rem;
   }
 
@@ -482,26 +537,11 @@
     font-size: 0.97rem;
   }
 
-  .inline-figure {
-    margin: 1.1rem 0 1.5rem;
-  }
-
-  .inline-figure img {
-    width: 100%;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-  }
-
-  .inline-figure figcaption {
-    font-size: 0.82rem;
-    color: #64748b;
-    margin-top: 0.4rem;
-  }
-
+  /* personas */
   .persona-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
     margin: 0.9rem 0 1.2rem;
   }
 
@@ -509,18 +549,36 @@
     background: #ffffff;
     border-radius: 12px;
     border: 1px solid #e2e8f0;
-    padding: 0.85rem 0.95rem;
+    padding: 0.9rem 0.95rem 1rem;
+    position: relative;
+    overflow: hidden;
   }
 
-  .persona img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
-    border: 1px solid #e2e8f0;
+  .persona-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin-bottom: 0.45rem;
+    display: block;
+  }
+
+  .persona-tag {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.7rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+    background: #f9fafb;
+    border-radius: 999px;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid #e5e7eb;
   }
 
   .persona h3 {
-    margin: 0 0 0.2rem;
+    margin: 0.2rem 0 0.1rem;
     font-size: 1rem;
     text-transform: lowercase;
   }
@@ -533,11 +591,216 @@
 
   .persona ul {
     margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* flow diagram */
+  .flow-diagram {
+    margin: 1rem 0 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+
+  .flow-step {
+    flex: 1 1 150px;
+    min-width: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    padding: 0.55rem 0.6rem 0.6rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .flow-step p {
+    margin: 0;
+    font-size: 0.86rem;
+  }
+
+  .flow-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 999px;
+    background: #22c55e;
+    color: #022c22;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .flow-arrow {
+    font-size: 1rem;
+    color: #94a3b8;
+    padding-inline: 0.1rem;
+  }
+
+  /* matrix */
+  .matrix {
+    margin: 1rem 0 1.4rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 0.85rem 0.9rem;
+    background: #ffffff;
+  }
+
+  .matrix-axes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94a3b8;
+    margin-bottom: 0.45rem;
+  }
+
+  .matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .matrix-cell {
+    border-radius: 10px;
+    border: 1px dashed #e2e8f0;
+    padding: 0.55rem 0.6rem;
+    background: #f9fafb;
+  }
+
+  .matrix-cell h3 {
+    margin: 0 0 0.3rem;
+    font-size: 0.86rem;
+    text-transform: none;
+  }
+
+  .matrix-cell ul {
+    margin-left: 1rem;
+    font-size: 0.84rem;
+  }
+
+  /* wireframe */
+  .wireframe {
+    margin: 1rem 0 1.4rem;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 0.85rem 0.9rem 0.95rem;
+    background: #ffffff;
+  }
+
+  .wireframe-header {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+  }
+
+  .wireframe-card {
+    display: flex;
+    gap: 0.7rem;
+    align-items: stretch;
+    margin-bottom: 0.7rem;
+  }
+
+  .wireframe-art {
+    width: 70px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+  }
+
+  .wireframe-art.small {
+    width: 48px;
+  }
+
+  .wireframe-body {
+    flex: 1;
+  }
+
+  .wireframe-pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .pill {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #0f172a;
+  }
+
+  .wireframe-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .line {
+    height: 6px;
+    border-radius: 999px;
+    background: #e2e8f0;
+  }
+
+  .line.short {
+    width: 40%;
+  }
+
+  .line.medium {
+    width: 65%;
+  }
+
+  .line.long {
+    width: 90%;
+  }
+
+  .wireframe-cta-row {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    font-size: 0.72rem;
+    padding: 0.16rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    background: #f9fafb;
+    color: #0f172a;
+  }
+
+  .cta.primary {
+    background: #22c55e;
+    border-color: #16a34a;
+    color: #022c22;
+  }
+
+  .cta.subtle {
+    color: #64748b;
+    background: #f8fafc;
+  }
+
+  .subtle-card {
+    opacity: 0.65;
   }
 
   @media (max-width: 600px) {
     .case-study {
       padding-inline: 1rem;
+    }
+
+    .flow-diagram {
+      flex-direction: column;
+    }
+
+    .flow-arrow {
+      display: none;
     }
   }
 </style>
